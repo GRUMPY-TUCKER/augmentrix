@@ -13,12 +13,12 @@ class AugmazeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Augmaze',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: MainScreen(),
-      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -30,7 +30,6 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
-
   final List<Widget> _pages = [
     HomePage(),
     ExplorePage(),
