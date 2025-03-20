@@ -57,7 +57,9 @@ class _MainScreenState extends State<MainScreen> {
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: Theme.of(context).primaryColorDark,
+        unselectedItemColor: Colors.blueGrey,
+        backgroundColor: Theme.of(context).colorScheme.primaryFixedDim,
         onTap: _onItemTapped,
       ),
     );
