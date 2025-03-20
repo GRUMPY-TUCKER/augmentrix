@@ -1,23 +1,23 @@
+import 'package:augmaze/screens/chatPage/view/chatPage.view.dart';
+import 'package:augmaze/screens/explorePage/view/explorePage.view.dart';
+import 'package:augmaze/screens/home/view/homePage.view.dart';
+import 'package:augmaze/screens/profilePage/view/profilePage.view.dart';
+import 'package:augmaze/screens/settingsPage/view/settingsPage.view.dart';
+import 'package:augmaze/utils/theme.utils.dart';
 import 'package:flutter/material.dart';
-import 'screens/home_page.dart';
-import 'screens/explore_page.dart';
-import 'screens/chat_page.dart';
-import 'screens/settings_page.dart';
-import 'screens/profile_page.dart';
+import 'package:get/get.dart';
 
 void main() {
-  runApp(AugmazeApp());
+  runApp(MyApp());
 }
 
-class AugmazeApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Augmaze',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: BubblegumTheme.lightTheme,
       home: MainScreen(),
     );
   }
