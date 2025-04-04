@@ -12,25 +12,31 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Profile Page", style: GoogleFonts.acme(fontSize: 30),),
+        centerTitle: true,
+      ),
         body: Container(
           width: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage(AssetsUtil.getBackgroundCommonImage()),
+              image: AssetImage(AssetsUtil.getBackgroundCommonImage1()),
               fit: BoxFit.cover,
             ),
           ),
-          child: Column(
-              children: [
-                SizedBox(height: 70,),
-                Text("Profile", style: GoogleFonts.acme(fontSize: 35, color: Colors.black),),
-                SizedBox(height: 200,),
-                CustomButton(label: "Login", onPressed: ()=>RoutesUtil.to(()=>LoginView()),),
-                SizedBox(height: 20,),
-                Text("or", style: GoogleFonts.acme(color: Theme.of(context).primaryColorDark, fontSize: 20),),
-                SizedBox(height: 20,),
-                CustomButton(label: "SignUp", onPressed: ()=>RoutesUtil.to(()=>SignUpView()),)
-              ]
+          child: Center(
+            child: Column(
+                children: [
+                  SizedBox(height: 70,),
+                  //Text("Profile", style: GoogleFonts.acme(fontSize: 35, color: Colors.black),),
+                  SizedBox(height: 200,),
+                  CustomButton(label: "Login", onPressed: ()=>RoutesUtil.to(()=>LoginView()),),
+                  SizedBox(height: 20,),
+                  Text("or", style: GoogleFonts.acme(color: Theme.of(context).primaryColorDark, fontSize: 20),),
+                  SizedBox(height: 20,),
+                  CustomButton(label: "SignUp", onPressed: ()=>RoutesUtil.to(()=>SignUpView()),)
+                ]
+            ),
           ),
         )
     );

@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Augmaze',
-      theme: BubblegumTheme.lightTheme,
+      theme: AppTheme.theme,
       home: MainScreen(),
     );
   }

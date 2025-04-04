@@ -25,66 +25,58 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        width: double.infinity,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(AssetsUtil.getLoginImage()),
-            fit: BoxFit.cover, // Ensures the image fills the background properly
-          ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
-          child: Column(
-            children: [
-              const Spacer(),
-              Text(
-                "Login",
-                style: GoogleFonts.acme(fontSize: 30, color: Theme.of(context).primaryColorDark),
-              ),
-              const SizedBox(height: 50),
-              CustomTextField(
-                hint: "Enter Email",
-                label: "Email",
-                controller: loginController.email,
-              ),
-              const SizedBox(height: 20),
-              CustomTextField(
-                hint: "Enter Password",
-                isPassword: true,
-                label: "Password",
-                controller: loginController.password,
-              ),
-              const SizedBox(height: 30),
-              CustomButton(
-                label: "Login",
-                onPressed: () => {},
-              ),
-              const SizedBox(height: 35),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("Don't have an account? ", style: GoogleFonts.acme()),
-                  InkWell(
-                    onTap: () => loginController.goToSignup(),
-                    child: Text(
-                      "Signup",
-                      style: GoogleFonts.acme(color: Theme.of(context).primaryColorDark),
-                    ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 25),
+        child: Column(
+          children: [
+            const Spacer(),
+            Text(
+              "Login",
+              style: GoogleFonts.acme(fontSize: 30, color: Theme.of(context).primaryColorDark),
+            ),
+            const SizedBox(height: 50),
+            CustomTextField(
+              hint: "Enter Email",
+              label: "Email",
+              controller: loginController.email,
+            ),
+            const SizedBox(height: 20),
+            CustomTextField(
+              hint: "Enter Password",
+              isPassword: true,
+              label: "Password",
+              controller: loginController.password,
+            ),
+            const SizedBox(height: 30),
+            CustomButton(
+              label: "Login",
+              onPressed: () => {},
+            ),
+            const SizedBox(height: 35),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Don't have an account? ", style: GoogleFonts.acme()),
+                SizedBox(width: 10,),
+                InkWell(
+                  onTap: () => loginController.goToSignup(),
+                  child: Text(
+                    "Signup",
+                    style: GoogleFonts.acme(color: Theme.of(context).primaryColorDark),
                   ),
-                ],
-              ),
-              const SizedBox(height: 10),
-              InkWell(
-                onTap: () => loginController.forgotPassword(),
-                child: Text(
-                  "Forgot Password?",
-                  style: GoogleFonts.acme(color: Theme.of(context).primaryColorDark),
                 ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            InkWell(
+              onTap: () => loginController.forgotPassword(),
+              child: Text(
+                "Forgot Password?",
+                style: GoogleFonts.acme(color: Theme.of(context).primaryColorDark),
               ),
-              const Spacer()
-            ],
-          ),
+            ),
+            const Spacer()
+          ],
         ),
       ),
     );

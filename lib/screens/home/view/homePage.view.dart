@@ -10,17 +10,21 @@ class HomePage extends StatelessWidget {
     String userName = "User"; // Replace with actual user data
 
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Home", style: GoogleFonts.acme(fontSize: 30),),
+        centerTitle: true,
+      ),
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage(AssetsUtil.getBackgroundCommonImage()), fit: BoxFit.cover),
+          image: DecorationImage(image: AssetImage(AssetsUtil.getBackgroundCommonImage1()), fit: BoxFit.cover),
         ),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
               SizedBox(height: 50,),
-              Text('Community', style: GoogleFonts.acme(fontSize: 35,color: Colors.black),textAlign: TextAlign.center,),
+              //Text('Community', style: GoogleFonts.acme(fontSize: 35,color: Colors.black),textAlign: TextAlign.center,),
               SizedBox(height: 30,),
               TextField(
                 decoration: InputDecoration(
@@ -47,8 +51,8 @@ class HomePage extends StatelessWidget {
                       color: Colors.white,
                       margin: EdgeInsets.symmetric(vertical: 8.0),
                       child: ListTile(
-                        title: Text('Post ${index + 1}', style: GoogleFonts.abel(fontWeight: FontWeight.bold),),
-                        subtitle: Text('This is a community post description.', style: GoogleFonts.abel(),),
+                        title: Text('Post ${index + 1}', style: GoogleFonts.abel(fontWeight: FontWeight.bold, color: Colors.black),),
+                        subtitle: Text('This is a community post description.', style: GoogleFonts.abel(color: Colors.black),),
                         trailing: Icon(Icons.comment),
                       ),
                     );

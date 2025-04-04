@@ -24,7 +24,7 @@ class _SignUpViewState extends State<SignUpView> {
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage(AssetsUtil.getSignUpImage(),), fit: BoxFit.cover)
+          image: DecorationImage(image: AssetImage(AssetsUtil.getBackgroundCommonImage1(),), fit: BoxFit.cover)
         ),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
