@@ -27,15 +27,24 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
           decoration: BoxDecoration(
             image: DecorationImage(image: AssetImage(AssetsUtil.getForgotPasswordImage()), fit: BoxFit.cover),
           ),
-          child: Padding(
-            padding: EdgeInsets.all(10),
-            child: Column(
-              children: [
-                SizedBox(height: 300,),
-                CustomTextField(hint: "enter registered email", label: "Reset Password with Email", controller: forgotPasswordController.email1,),
-                SizedBox(height: 40,),
-                CustomButton(label: "Reset Password", onPressed: (){},)
-              ],
+          child: Container(
+            width: double.infinity,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(AssetsUtil.getBackgroundCommonImage1()),
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: Padding(
+              padding: EdgeInsets.all(10),
+              child: Column(
+                children: [
+                  SizedBox(height: 300,),
+                  CustomTextField(hint: "enter registered email", label: "Reset Password with Email", controller: forgotPasswordController.email1,),
+                  SizedBox(height: 40,),
+                  CustomButton(label: "Reset Password", onPressed: (){},)
+                ],
+              ),
             ),
           ),
         )

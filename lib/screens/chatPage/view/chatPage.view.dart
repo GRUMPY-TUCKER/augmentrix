@@ -23,8 +23,22 @@ class ChatPage extends StatelessWidget {
               children: [
                 SizedBox(height: 70,),
                 //Text("Chat", style: GoogleFonts.acme(fontSize: 35, color: Colors.black),),
-                SizedBox(height: 250,),
-                Center(child: Text("Chat Page Content", style: GoogleFonts.abel(fontWeight: FontWeight.bold),),),
+                Expanded(
+                  child: ListView.builder(
+                    itemCount: 10, // Placeholder for community posts
+                    itemBuilder: (context, index) {
+                      return Card(
+                        color: Colors.white,
+                        margin: EdgeInsets.symmetric(vertical: 8.0),
+                        child: ListTile(
+                          title: Text('Friend ${index + 1}', style: GoogleFonts.abel(fontWeight: FontWeight.bold, color: Colors.black),),
+                          subtitle: Text('Chat', style: GoogleFonts.abel(color: Colors.black),),
+                          trailing: Icon(Icons.comment),
+                        ),
+                      );
+                    },
+                  ),
+                ),
               ]
           ),
         )

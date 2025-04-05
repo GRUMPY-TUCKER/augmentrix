@@ -1,7 +1,8 @@
-// Explore Page
 import 'package:augmaze/utils/assets.util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../../globalComponents/button.component.dart';
+
 
 class ExplorePage extends StatelessWidget {
   @override
@@ -24,7 +25,10 @@ class ExplorePage extends StatelessWidget {
               SizedBox(height: 70,),
               //Text("Explore", style: GoogleFonts.acme(fontSize: 35, color: Colors.black),),
               SizedBox(height: 250,),
-              Center(child: Text("Explore Page Content", style: GoogleFonts.abel(fontWeight: FontWeight.bold),),),
+              Center(child: CustomButton(
+                label: "Labs",
+                onPressed: () => {},
+              ),),
             ]
         ),
       ),
